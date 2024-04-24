@@ -7,7 +7,7 @@ const feel = document.getElementById('feelslike');
 async function weather(cityName) {
     try {
 
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=ee197a4b155b4d3d843153413241904&q=${cityName}`, {mode: 'cors'});
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=ee197a4b155b4d3d843153413241904&q=${cityName}`, {mode: 'cors'});
         const data = await response.json();
         console.log(data);
         city.textContent = `City: ${data.location.name}`;
