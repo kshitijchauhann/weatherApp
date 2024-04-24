@@ -21,14 +21,6 @@ async function weather(cityName) {
 }
 
 
-async function searchComplete(cityName) {
-        const response = await fetch(`http://api.weatherapi.com/v1/search.json?key=ee197a4b155b4d3d843153413241904&q=${cityName}`);
-        const data = await response.json();
-        console.log(data);
-
-}
-
-
 document.getElementById('search-button').addEventListener('click', async () => {
     try {
         const cityName = document.getElementById('search').value;
