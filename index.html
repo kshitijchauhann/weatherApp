@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
     <title>Weather-App</title>
+
 </head>
 <body>
-    <div>
-        <div id="city">city</div>
-        <div id="time">time</div>
-        <div id="temp-cel">temp cel</div>
-        <div id="temp-far">temp far</div>
+    
+    <h1>Weather-App</h1>
+    <div id="search-area">
+            <input type="text" id="search" placeholder="Enter the name of the city... "/>
+            <button id="search-button">Search</button>
+        
+            <div id="city" class="weather"></div>
+            <div id="time" class="weather"></div>
+            <div id="temp-cel" class="weather"></div>
+            <div id="feelslike" class="weather"></div>
+
+            <div id="error" class="weather"></div>
     </div>
     <script src="app.js"></script>
 </body>

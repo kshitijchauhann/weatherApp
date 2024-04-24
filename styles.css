@@ -1,4 +1,42 @@
-#background {
-    max-width: 10000px;
-    height: 8000px;
+body:not(#search-area) {
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+body {
+    display: block;
+}
+
+#search-area {
+    width: 800px;
+    height: 700px;
+    margin: 65px 450px 85px 550px;
+    outline: solid 1px black;
+    justify-content: center;
+    background-color: aliceblue;
+    
+}
+
+input{
+    display: inline-block;
+    margin-left: 17px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 700px;
+    height: 20px;
+}
+
+
+button {
+    height: 25px;
+}
+
+.weather {
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 45px;
+    color: rgb(61, 98, 141);
 }
