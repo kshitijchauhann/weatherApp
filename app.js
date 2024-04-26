@@ -10,8 +10,8 @@ async function weather(cityName) {
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=ee197a4b155b4d3d843153413241904&q=${cityName}`, {mode: 'cors'});
         const data = await response.json();
         console.log(data);
-        city.textContent = `City: ${data.location.name}`;
-        time.textContent = `Time: ${data.location.localtime}`;
+        city.textContent = `${data.location.name}`;
+        time.textContent = `Local Time: ${data.location.localtime}`;
         tempCelcius.textContent = `Temperature: ${data.current.temp_c} C`;
         feel.textContent = `Feels like ${data.current.feelslike_c} C`;
     } catch(error) {
@@ -25,7 +25,6 @@ document.getElementById('search-button').addEventListener('click', async () => {
     try {
         const cityName = document.getElementById('search').value;
         await weather(cityName);
-        await searchComplete(cityName);
     } catch(error) {
         errorMessage.textContent = `${error}`;
     }
