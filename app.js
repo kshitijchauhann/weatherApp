@@ -13,7 +13,7 @@ async function weather(cityName) {
         city.textContent = `${data.location.name}`;
         time.textContent = `Local Time: ${data.location.localtime}`;
         tempCelcius.textContent = `Temperature: ${data.current.temp_c} C`;
-        feel.textContent = `Feels like ${data.current.feelslike_c} C`;
+        feel.textContent = `Feels like: ${data.current.feelslike_c} C`;
     } catch(error) {
         console.log(error);
         throw new Error('City not found. Please enter a valid city name.');
