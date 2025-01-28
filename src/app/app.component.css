@@ -1,0 +1,181 @@
+
+/* Global styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+}
+
+#all {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #00b8d4;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+/* Form styles */
+.example-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+/* More specific input styles to override Material defaults */
+.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field {
+  --mdc-filled-text-field-container-color: #424242;
+  --mdc-filled-text-field-label-text-color: rgba(255, 255, 255, 0.7);
+  --mdc-filled-text-field-input-text-color: white;
+  --mdc-filled-text-field-focus-active-indicator-color: white;
+  --mdc-filled-text-field-active-indicator-color: white;
+  --mdc-filled-text-field-hover-active-indicator-color: white;
+}
+
+.mat-mdc-text-field-wrapper {
+  background-color: #424242 !important;
+}
+
+/* This targets the actual input element */
+.mat-mdc-form-field input.mat-mdc-input-element {
+  color: white !important;
+}
+
+/* This targets the label */
+.mat-mdc-form-field .mdc-floating-label {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Placeholder styles for light theme */
+.mat-mdc-form-field input.mat-mdc-input-element::placeholder,
+.mat-mdc-form-field input.mat-mdc-input-element::-webkit-input-placeholder,
+.mat-mdc-form-field input.mat-mdc-input-element::-moz-placeholder,
+.mat-mdc-form-field input.mat-mdc-input-element:-ms-input-placeholder,
+.mat-mdc-form-field input.mat-mdc-input-element:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Placeholder styles for dark theme */
+.dark-theme .mat-mdc-form-field input.mat-mdc-input-element::placeholder,
+.dark-theme .mat-mdc-form-field input.mat-mdc-input-element::-webkit-input-placeholder,
+.dark-theme .mat-mdc-form-field input.mat-mdc-input-element::-moz-placeholder,
+.dark-theme .mat-mdc-form-field input.mat-mdc-input-element:-ms-input-placeholder,
+.dark-theme .mat-mdc-form-field input.mat-mdc-input-element:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Button styles */
+.example-button-row {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+button[mat-fab] {
+  background-color: #00796b !important;
+  color: white !important;
+  padding: 25px 40px;
+  font-size: 1.2rem;
+}
+
+/* Card styles */
+mat-card {
+  margin-top: 30px;
+  background-color: #424242 !important;
+  color: #ffffff !important;
+}
+
+mat-card-content {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 1.2rem;
+  color: #ffffff !important;
+}
+
+mat-card-content:last-child {
+  border-bottom: none;
+}
+
+/* Dark theme styles */
+.dark-theme {
+  background-color: #303030 !important;
+}
+
+.dark-theme .container {
+  background-color: #424242 !important;
+  box-shadow: 0 6px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme mat-card {
+  background-color: #f5f5f5 !important;
+  color: #424242 !important;
+}
+
+.dark-theme mat-card-content {
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+  color: #424242 !important;
+}
+
+/* Dark theme input styles with increased specificity */
+.dark-theme .mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field {
+  --mdc-filled-text-field-container-color: #f5f5f5;
+  --mdc-filled-text-field-label-text-color: rgba(0, 0, 0, 0.6);
+  --mdc-filled-text-field-input-text-color: #424242;
+  --mdc-filled-text-field-focus-active-indicator-color: #424242;
+  --mdc-filled-text-field-active-indicator-color: #424242;
+  --mdc-filled-text-field-hover-active-indicator-color: #424242;
+}
+
+.dark-theme .mat-mdc-text-field-wrapper {
+  background-color: #f5f5f5 !important;
+}
+
+.dark-theme .mat-mdc-form-field input.mat-mdc-input-element {
+  color: #424242 !important;
+}
+
+.dark-theme .mat-mdc-form-field .mdc-floating-label {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Responsive styles */
+@media (max-width: 850px) {
+  .container {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+  }
+}
+

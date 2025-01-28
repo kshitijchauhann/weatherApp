@@ -1,0 +1,26 @@
+<div id="all" [class.dark-theme]="isDarkTheme">
+  <div class="container">
+    <button mat-button class="theme-toggle" (click)="toggleTheme()">
+      Switch to {{ isDarkTheme ? 'Light' : 'Dark' }} Theme
+    </button>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter Location</mat-label>
+        <input matInput type="text" [(ngModel)]="cityName" name="cityName" placeholder="Enter the name of your city">
+      </mat-form-field>
+      <div class="example-button-row">
+        <button mat-fab extended (click)="fetchWeather()">
+          <mat-icon>submit</mat-icon>
+          Submit
+        </button>
+      </div>
+      <mat-card appearance="outlined" *ngIf="weatherData">
+        <mat-card-content>Location: {{ cityName.toUpperCase() }}</mat-card-content>
+        <mat-card-content>Date: {{ weatherData.location.localtime | date:'yyyy-MM-dd' }}</mat-card-content>
+        <mat-card-content>Time: {{ weatherData.location.localtime | date:'HH:mm' }} </mat-card-content>
+        <mat-card-content>Temperature: {{ weatherData.current.temp_c }} °C</mat-card-content>
+        <mat-card-content>Feels like: {{ weatherData.current.feelslike_c }} °C</mat-card-content>
+      </mat-card>
+    </form>
+  </div>
+</div>
